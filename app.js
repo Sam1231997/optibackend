@@ -111,4 +111,4 @@ app.put('/submissions/:id', async (req, res) => {
 
 // Start the server
 
-app.listen(port, () => console.log(`Server running on port ${PORT}`));
+app.listen(port, () => console.log(`Server running on port ${port}`));
