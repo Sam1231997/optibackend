@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const port = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.json());
@@ -110,5 +110,5 @@ app.put('/submissions/:id', async (req, res) => {
 });
 
 // Start the server
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+app.listen(port, () => console.log(`Server running on port ${PORT}`));
