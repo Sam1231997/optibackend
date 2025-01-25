@@ -6,7 +6,12 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+const corsOptions = {
+  origin: ["https://opticareeyeclinic.vercel.app"], // Replace with frontend URLs
+  methods: ["GET", "POST", "PUT", "DELETE"],
+};
 
+app.use(cors(corsOptions));
 // Connect to MongoDB
 const mongoURI = 'mongodb+srv://opyotusamuel2020:4kdVS1weLmYSFKrF@cluster0.39jc4.mongodb.net/optic?retryWrites=true&w=majority';
 mongoose.connect(mongoURI)
